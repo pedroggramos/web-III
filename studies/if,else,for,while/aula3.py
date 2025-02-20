@@ -1,5 +1,5 @@
 #Estrutura condicional if/else/elif ------------------
-''''
+
 a = int(input('Digite o valor de a: '))
 b = int(input('Digite o valor de b: '))
 
@@ -9,6 +9,7 @@ else:
     print(f'O valor {a} não é maior que o valor {b}')
 
 #-----------------------------------------------------
+''''
 nome = input('Digite seu nome: ')
 if nome == 'Gustavo':
     print(f'Oi!Seja bem vindo {nome}!')
