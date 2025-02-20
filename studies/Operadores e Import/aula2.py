@@ -164,7 +164,7 @@ em cara ou coroa
 
 nome = input('Digite o seu nome ')
 
-print(f'O nome da pessoa é {nome} esse nome possui {len(nome)} caracteres.')
+print(f'O nome da pessoa é {nome} esse nome possui { (nome)} caracteres.')
 
 #upper() - letra maiuscula --------------------------------------
 
