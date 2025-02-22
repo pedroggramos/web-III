@@ -107,6 +107,8 @@
 # else:
 #     print(f"{num} não é um numero perfeito")
 
+# ---------------------
+
 # 9)
 
 # n = int(input("numero de sequencias: "))
@@ -117,6 +119,9 @@
 # for i in range(n):
 #     print(t1)
 #     t1,t2 = t2, t1 + t2
+
+# ---------------------------
+
 
 # 10)
 
