@@ -95,7 +95,40 @@
 # ----------------------
 
 # 8)
+# num = int (input("Numero: "))
 
+# soma_divisores = 0
+# for i in range(1, num):
+#     if num % i == 0:
+#         soma_divisores += i
+
+# if soma_divisores == num:
+#     print(f"{num} é um numero perfeito")
+# else:
+#     print(f"{num} não é um numero perfeito")
+
+# 9)
+
+# n = int(input("numero de sequencias: "))
+
+# t1 = 0
+# t2 = 1
+
+# for i in range(n):
+#     print(t1)
+#     t1,t2 = t2, t1 + t2
+
+# 10)
+
+# base = int(input("base: "))
+# limite = int(input("limite: "))
+
+# print(f"TABUADA DE {base}")
+# print(f"")
+
+
+# for i in range(1,limite):
+#     print(f"{base} x {i} = {base * i}")
 
 
 
