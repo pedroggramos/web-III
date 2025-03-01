@@ -161,13 +161,69 @@
 
 # --------------------------
 
-nota = [0] * 3
-for a in range(0,len(nota)):
-    nota[a] = float(input(f"Digite as notas: "))
-media = ((nota[0] + nota[1] + nota[2]) / 3)
-print(f'A media de aluno é {media:.1f}')
+# nota = [0] * 3
+# for a in range(0,len(nota)):
+#     nota[a] = float(input(f"Digite as notas: "))
+# media = ((nota[0] + nota[1] + nota[2]) / 3)
+# print(f'A media de aluno é {media:.1f}')
 
 
+# -----------------------------
+
+# reverse() - inverte a lista -----------------
+
+# n = [1,2,3,4,5,6,7]
+
+# n.reverse()
+# print(f'A lista invertida é {n}')
+
+# # ------------------
+
+# d = []
+# for i in range(5):
+#     num = float(input('Digite um numero: '))
+#     d.append(num)
+#     d.reverse()
+# print(f'A lista invertida é: {d}')
+
+# ----------------------
+
+
+# sum() - soma todos os valores da lista -------------
+
+# print(f'A soma dos valores da lista é {sum(d)}')
+
+# pop() - apagar o ultimo elemento da lista -----------------
+
+x = [1,2,3,4,5]
+
+# x.pop()
+# print(x)
+
+# x.pop(2)
+# print(x)
+
+# del() - apagar elementos da lista, podendo ainda definir o intervalo
+
+# del(x)
+# del(x[1:3])
+# print(x)
+
+
+# sort() - para ordenar a lista em ordem crescente -------------------
+
+# l = ['b', 'l', 'c', 'a']
+# l.sort()
+# # print(l)
+
+# l.sort(reverse=True) #ordem descrescente
+# print(l)
+
+# exemplo mostrando o indice do valor -----------------------
+
+# lista = [10,20,30,40,50]
+# for i, v in enumerate(lista):
+#     print(f'Indice = {i} Valor = {v}')
 
 
 
