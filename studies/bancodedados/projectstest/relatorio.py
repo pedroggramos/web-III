@@ -63,9 +63,40 @@ print(ticket_medio)
 
 # enviando por email com o relatório
 
+import win32com.client as win32
+outlook = win32.Dispatch('outlook.application')#seleciona o aplicativo
+mail = outlook.CreateItem(0)#cria o email
+# mail.To = 'gahespanhol@gmail.com'#destino
+mail.To = 'pege15@outlook.com.br'#destino
+mail.Subject = 'Eu te amo!'#Titulo
+# mail.HTMLBody = '''<html>
+#                     <body>
+#                     <p>For your eyes only,<br> I show my <strong>HEART!</strong>
+#                     </body>
+#                     </html>'''
 
 
+mail.HTMLBody = '''
+Prezados,
 
+Faturamento:
+{}
+
+Quantidade de produtos vendidos por cada loja:
+{}
+
+Ticket Médio:
+{}
+
+
+Qualquer dúvida estou a disposção!
+
+Att.,
+Pedro.
+
+'''
+
+mail.Send()
 
 
 
