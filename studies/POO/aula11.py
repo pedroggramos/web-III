@@ -171,9 +171,9 @@
 #
 # # ------------------------------
 
+
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 
 class Aluno:
     def __init__(self, nome, idade, curso):
@@ -182,7 +182,7 @@ class Aluno:
         self.curso = curso
         self.notas = []
 
-    def adicionar_notas(self, nota):
+    def adicionar_nota(self, nota):
         if 0 <= nota <= 10:
             self.notas.append(nota)
             return True
@@ -214,15 +214,19 @@ class App:
         self.idade_entry = tk.Entry(self.root)
         self.idade_entry.grid(row=1, column=1)
 
-        tk.Label(self.root, text="Curso: ").grid(row = 2, column = 0)
+        tk.Label(self.root, text="Curso: ").grid(row=2, column=0)
         self.curso_entry = tk.Entry(self.root)
-        self.curso_entry.grid(row = 2, column = 1)
+        self.curso_entry.grid(row=2, column=1)
 
-        tk.button(self.root, text="Cadastrar Aluno", command=self.cadastrar_aluno).grid(row = 3, columnspan = 2, pady = 10)
+        tk.Button(self.root, text="Cadastrar Aluno", command=self.cadastrar_aluno).grid(row=3, columnspan=2, pady=10)
 
+        tk.Label(self.root, text="Nota: ").grid(row=4, column=0)
+        self.nota_entry = tk.Entry(self.root)
+        self.nota_entry.grid(row=4, column=1)
 
-
-
+        tk.Button(self.root, text="Adicionar Nota", command=self.adicionar_nota).grid(row=5, columnspan=2, pady=10)
+        tk.Button(self.root, text="Ver Média e Situação", command=self.mostrar_media).grid(row=6, columnspan=2, pady=5)
+        tk.Button(self.root, text="Mostrar Dados", command=self.mostrar_dados).grid(row=7, columnspan=2, pady=5)
 
     def cadastrar_aluno(self):
         nome = self.nome_entry.get().strip()
@@ -237,12 +241,43 @@ class App:
 
     def adicionar_nota(self):
         if not self.aluno:
-            messagebox.showwarning("Erro", "Cadastre um aluno primeiro.")
-        return
+            messagebox.showwarning("Erro", "Cadastre um aluno primeiro")
+            return
 
         nota_str = self.nota_entry.get().strip()
         try:
             nota = float(nota_str)
             if self.aluno.adicionar_nota(nota):
+                messagebox.showinfo("Nota", f'Nota {nota} adicionada.')
+                self.nota_entry.delete(0, tk.END)
+            else:
+                messagebox.showwarning("Erro", "Nota deve estar entre 0 e 10")
+        except ValueError:
+            messagebox.showwarning("Erro", "Digite um número válido")
 
+    def mostrar_media(self):
+        if not self.aluno:
+            messagebox.showwarning("Erro", "Cadastre um aluno primeiro")
+            return
 
+        aprovado, media = self.aluno.verificar_aprovacao()
+        status = "Aprovado" if aprovado else "Reprovado"
+        messagebox.showinfo("Resultado", f'Média: {media:.2f}\nSituação: {status}')
+
+    def mostrar_dados(self):
+        if not self.aluno:
+            messagebox.showwarning("Erro", "Cadastre um aluno primeiro")
+            return
+
+        dados = (
+            f"Nome: {self.aluno.nome}\n"
+            f"Idade: {self.aluno.idade}\n"
+            f"Curso: {self.aluno.curso}\n"
+            f"Notas: {self.aluno.notas}\n"
+            f"Média: {self.aluno.calcula_media():.2f}\n"
+        )
+        messagebox.showinfo("DADOS DO ALUNO", dados)
+
+root = tk.Tk()
+app = App(root)
+root.mainloop()
