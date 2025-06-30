@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c61ec14a-4fa3-49ba-ae02-e0f4b081f711" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/studies/POO/encapsulamento/aula12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/web-III.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-III.iml" afterDir="false" />
+    <list default="true" id="c61ec14a-4fa3-49ba-ae02-e0f4b081f711" name="Changes" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studies/POO/aula11.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/POO/aula11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studies/POO/treeview/aula13.py" beforeDir="false" afterPath="$PROJECT_DIR$/studies/POO/treeview/aula13.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +67,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -125,12 +127,26 @@
       <workItem from="1751068701691" duration="9305000" />
       <workItem from="1751152226140" duration="33000" />
       <workItem from="1751152544757" duration="10070000" />
-      <workItem from="1751172031322" duration="792000" />
+      <workItem from="1751172031322" duration="1671000" />
+      <workItem from="1751236501809" duration="7387000" />
     </task>
+    <task id="LOCAL-00001" summary="up">
+      <option name="closed" value="true" />
+      <created>1751173106581</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751173106581</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -151,6 +167,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/web_III$aula12.coverage" NAME="aula12 Coverage Results" MODIFIED="1751165621421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/studies/encapsulamento" />
     <SUITE FILE_PATH="coverage/web_III$aula11.coverage" NAME="aula11 Coverage Results" MODIFIED="1751153572850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/studies/POO" />
-    <SUITE FILE_PATH="coverage/web_III$aula13.coverage" NAME="aula13 Coverage Results" MODIFIED="1751172481057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/studies/POO/treeview" />
+    <SUITE FILE_PATH="coverage/web_III$aula13.coverage" NAME="aula13 Coverage Results" MODIFIED="1751238373428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/studies/POO/treeview" />
   </component>
 </project>
