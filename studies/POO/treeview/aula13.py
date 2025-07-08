@@ -87,7 +87,7 @@ from studies.bancodedados.databasetest import conexao
 def criar_banco_tabela():
     try:
         conexao = mysql.connector.connect(
-            host="localhost:3306",
+            host="localhost",
             user="root",
             passwd="",
         )
@@ -134,28 +134,28 @@ def adicionar():
 
 def carregar_dados():
     for item in tree.get_children():
-        tree.delete(item)
+        tree.delete(item) #limpa os dados atuais da tabela(janela)
     conexao = conectar()
     cursor = conexao.cursor()
-    cursor.execute("SELECT * FROM pessoas")
+    cursor.execute("SELECT * FROM pessoas") #busca todos os registros da tabela pessoa
     for row in cursor.fetchall():
-        tree.insert('', tk.END, values=row)
+        tree.insert('', tk.END, values=row) #adiciona cada linha na treeview
     conexao.close()
 
 def atualizar():
-    item = tree.selection()
-    if not item:
+    item = tree.selection() #seleciona uma linha e retorna em forma de tupla
+    if not item: #verifica se uma linha foi selecionada
         messagebox.showwarning('Atenção', 'Selecione um item para atualizar')
         return
-    id_pessoa=tree.item(item[0])['values'][0]
-    nome = entry_nome.get()
-    email = entry_email.get()
+    id_pessoa=tree.item(item[0])['values'][0] #pega os dados do item selecionado; retorna uma lista de valores da linha; pega o ID que está sempre na coluna 0
+    nome = entry_nome.get() #novo nome
+    email = entry_email.get() #novo email
     conexao = conectar()
     cursor = conexao.cursor()
-    cursor.execute('UPDATE pessoa SET nome=%s, email=%s WHERE id=%s',(nome, email, id_pessoa))
+    cursor.execute('UPDATE pessoas SET nome=%s, email=%s WHERE id=%s',(nome, email, id_pessoa)) #update
 
 def deletar():
-    item = tree.selection()
+    item = tree.selection() #seleciona uma linha e retorna em forma de tupla
     if not item:
         messagebox.showwarning('Atenção', 'Selecione um item para deletar')
         return
@@ -168,7 +168,7 @@ def deletar():
         conexao.commit()
         cursor.close()
         carregar_dados()
-        limpar_campos()
+        limpar_dados()
 
 def preencher_campos():
     item = tree.selection()
@@ -178,7 +178,7 @@ def preencher_campos():
         entry_email.delete(0, tk.END)
         entry_nome.insert(0, valores[0])
         entry_email.insert(0, valores[1])
-def limpar_campos():
+def limpar_dados():
     entry_nome.delete(0, tk.END)
     entry_email.delete(0, tk.END)
     tree.selection_remove(tree.selection())
