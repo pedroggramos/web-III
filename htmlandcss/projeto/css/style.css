@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    background-color: black;
+    font-family:Arial, sans-serif;
+    color:#fff;
+    text-align: center;
+    padding:20px;
+}
+
+.tela-inicial{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.tela-inicial button{
+    font-size:20px;
+    background-color: #00000050;
+    color:white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor:pointer;
+}
+
+.mensagem{
+    margin-top:20px;
+    font-size:18px;
+    color:#ccc;
+}
+
+
+.carrossel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease; /* corrigido aqui */
+}
+
+.slide.ativo {
+    opacity: 1;
+    z-index: 2;
+}
+
+.indicadores {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 3; /* garante que fique na frente das imagens */
+}
+
+.bolinha {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bolinha.ativo {
+    opacity: 1;
+    background-color: #ed1636;
+}
