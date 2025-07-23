@@ -24,6 +24,18 @@ body{
     cursor:pointer;
 }
 
+#amo{
+    color:rgba(187, 71, 119, 0.9);
+}
+
+.contadorbckgd{
+    display: inline-block;
+    height: 50%;
+    border-radius:25px;
+    box-shadow:0 0 15px 10px rgba(255, 0, 0, 0.444);
+    background-color: #ed1636;
+}
+
 .mensagem{
     margin-top:20px;
     font-size:18px;
