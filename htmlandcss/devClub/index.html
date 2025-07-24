@@ -1,23 +1,44 @@
 <!DOCTYPE html> <!-- Versão do HTML(5) -->
 <html lang="pt-br"> <!-- ESCOLHA DA LINGUA-->
-<head> 
+
+<head>
     <meta charset="UTF-8"> <!-- CONFIGURAÇÃO DOS CARCTERES -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- COMPATIBILIDADE -->
     <title>Starbucks</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="imgs/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <img src="imgs/logo.png" alt="LogoStarbucks">
-    <h1 style="font-family: Arial, Helvetica, sans-serif;">It's not just <strong style="color:brown">Coffee</strong><br>
-         It's Starbucks</h1>
-        <button class="botao">CLIQUE PARA PEDIR</button>
 
-        <img src="imgs/thumb1.png" alt="imagem-copinho-1">
-        <img src="imgs/thumb2.png" alt="imagem-copinho-2">
-        <img src="imgs/thumb3.png" alt="imagem-copinho-3">
-        
+<body>
+    <header></header>
+    <img class="logo" src="imgs/logo.png" alt="LogoStarbucks">
+    <div class="conteudo">
+        <div class="caixa-texto">
+            <h1>It's not just <span class="cafe">Coffee</span><br>It's <span class="star">Starbucks</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iste maiores animi, soluta culpa at
+                consequuntur tempora et harum aut tempore natus vel quisquam error eligendi quidem laborum perferendis
+                adipisci.</p>
+            <a href="https://www.rappi.com.br/restaurantes" target="_blank"><button class="botao">CLIQUE PARA PEDIR</button></a>
+        </div>
+        <div class="caixa-imagem">
+            <img id="copao" src="imgs/img1.png" alt="imagem-copo-1">
+        </div>
+    </div>
+
+    <div class="menu">
+        <img class="btn-menu" src="imgs/thumb1.png" alt="imagem-copinho-1">
+        <img class="btn-menu" src="imgs/thumb2.png" alt="imagem-copinho-2">
+        <img class="btn-menu" src="imgs/thumb3.png" alt="imagem-copinho-3">
+    </div>
+
+
 
 
 </body>
+
 </html>
